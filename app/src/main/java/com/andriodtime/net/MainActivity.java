@@ -39,11 +39,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         textViewSongTime = (TextView) findViewById(R.id.textViewSongTime);
         btnPlay.setOnClickListener(this);
 
-        TextView t3 = (TextView) findViewById(R.id.textViewIconCopyright);
-        t3.setText(Html.fromHtml("Icon made by " +
+        TextView textViewIconCopyright = (TextView) findViewById(R.id.textViewIconCopyright);
+        textViewIconCopyright.setText(Html.fromHtml("Icon made by " +
                 "<a href=\"http://www.flaticon.com/authors/alessio-atzeni\">Alessio Atzeni</a> " +
                 "from " + "<a href=\"http://www.flaticon.com\">www.flaticon.com</a> "));
-        t3.setMovementMethod(LinkMovementMethod.getInstance());
+        textViewIconCopyright.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     @Override
