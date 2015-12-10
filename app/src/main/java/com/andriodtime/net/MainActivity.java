@@ -11,12 +11,11 @@ import android.os.Bundle;
 import android.text.Html;
 import android.text.method.LinkMovementMethod;
 import android.util.Log;
-import android.view.View;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class MainActivity extends Activity implements View.OnClickListener {
+public class MainActivity extends Activity {
     public static ImageButton btnPlay, btnStop;
     public static TextView textViewSongTime;
     private Intent playerService;
@@ -37,24 +36,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
         btnStop = (ImageButton) findViewById(R.id.btnStop);
         seekBar = (SeekBar) findViewById(R.id.seekBar);
         textViewSongTime = (TextView) findViewById(R.id.textViewSongTime);
-        btnPlay.setOnClickListener(this);
 
         TextView textViewIconCopyright = (TextView) findViewById(R.id.textViewIconCopyright);
         textViewIconCopyright.setText(Html.fromHtml("Icon made by " +
                 "<a href=\"http://www.flaticon.com/authors/alessio-atzeni\">Alessio Atzeni</a> " +
                 "from " + "<a href=\"http://www.flaticon.com\">www.flaticon.com</a> "));
         textViewIconCopyright.setMovementMethod(LinkMovementMethod.getInstance());
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btnPlay:
-                break;
-            default:
-                break;
-        }
-
     }
 
     @Override
