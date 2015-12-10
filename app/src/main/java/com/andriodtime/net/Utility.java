@@ -1,6 +1,5 @@
 package com.andriodtime.net;
 
-import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
@@ -36,7 +35,6 @@ public class Utility {
             PendingIntent contentIntent = PendingIntent.getActivity(context, 0, notificationIntent, 0);
             notification.setLatestEventInfo(context, songName, null, contentIntent);
             mNotificationManager.notify(NOTIFICATION_ID, notification);
-            //activity.startForeground(NOTIFICATION_ID, notification);
 
         } catch (Exception e) {
             e.printStackTrace();
